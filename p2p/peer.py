@@ -146,7 +146,7 @@ class BasePeer(Service):
         # established from a dial-out or dial-in (True: dial-in, False:
         # dial-out)
         # TODO: rename to `dial_in` and have a computed property for `dial_out`
-        self.inbound = connection.is_dial_in
+        self.is_inbound = connection.is_dial_in
         self._subscribers: List[PeerSubscriber] = []
 
         # A counter of the number of messages this peer has received for each
